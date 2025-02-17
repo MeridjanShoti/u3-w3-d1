@@ -9,7 +9,7 @@ const MainSearch = () => {
   const baseEndpoint = "https://strive-benchmark.herokuapp.com/api/jobs?search=";
 
   const handleChange = (e) => {
-    dispatch({ type: "ADDQUERY", payload: e.target.value });
+    dispatch({ type: "ADD_QUERY", payload: e.target.value });
   };
 
   const handleSubmit = async (e) => {
@@ -19,7 +19,7 @@ const MainSearch = () => {
       const response = await fetch(baseEndpoint + query + "&limit=20");
       if (response.ok) {
         const { data } = await response.json();
-        dispatch({ type: "ADDJOBS", payload: data });
+        dispatch({ type: "ADD_JOBS", payload: data });
       } else {
         alert("Error fetching results");
       }

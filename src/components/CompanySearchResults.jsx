@@ -20,7 +20,7 @@ const CompanySearchResults = () => {
       const response = await fetch(baseEndpoint + params.company);
       if (response.ok) {
         const { data } = await response.json();
-        dispatch({ type: "ADDJOBS", payload: data });
+        dispatch({ type: "ADD_JOBS", payload: data });
       } else {
         alert("Error fetching results");
       }

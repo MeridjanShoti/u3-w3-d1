@@ -5,11 +5,11 @@ const initialState = {
 };
 const mainReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "ADDJOBS":
+    case "ADD_JOBS":
       return { ...state, jobs: [...state.jobs, action.payload] };
-    case "ADDQUERY":
+    case "ADD_QUERY":
       return { ...state, query: action.payload };
-    case "ADDFAVOURITE":
+    case "ADD_FAVOURITE":
       return { ...state, favourites: [...state.favourites, action.payload] };
     default:
       return state;

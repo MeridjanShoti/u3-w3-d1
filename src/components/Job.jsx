@@ -8,7 +8,7 @@ const Job = ({ data }) => {
     <Col xs={3}>
       <Link to={`/${data.company_name}`}>
         {data.company_name}{" "}
-        <span onClick={() => dispatch({ type: "ADDFAVOURITE", payload: data.company_name })}>♡</span>
+        <span onClick={() => dispatch({ type: "ADD_FAVOURITE", payload: data.company_name })}>♡</span>
       </Link>
     </Col>
     <Col xs={9}>
