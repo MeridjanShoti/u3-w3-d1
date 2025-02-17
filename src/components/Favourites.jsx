@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 const Favourites = () => {
-  const favouriteJobs = useSelector();
+  const favouriteJobs = useSelector((state) => state.favourites);
   return (
     <ul>
       {favouriteJobs.map((job, index) => (
