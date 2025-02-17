@@ -4,7 +4,7 @@ const Favourites = () => {
   return (
     <ul>
       {favouriteJobs.map((job, index) => (
-        <li key={`job-${index}`}></li>
+        <li key={`job-${index}`}>{job}</li>
       ))}
     </ul>
   );
