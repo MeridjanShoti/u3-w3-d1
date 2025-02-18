@@ -1,6 +1,7 @@
 import { Container, Row, Col, Form } from "react-bootstrap";
 import Job from "./Job";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const MainSearch = () => {
   const jobs = useSelector((state) => state.jobs);
@@ -34,6 +35,7 @@ const MainSearch = () => {
       <Row>
         <Col xs={10} className="mx-auto my-3">
           <h1 className="display-1">Remote Jobs Search</h1>
+          <Link to="/favourites">go to favourites</Link>
         </Col>
         <Col xs={10} className="mx-auto">
           <Form onSubmit={handleSubmit}>
